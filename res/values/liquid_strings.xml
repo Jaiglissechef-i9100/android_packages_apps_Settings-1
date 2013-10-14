@@ -2615,4 +2615,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="quick_mode_title">Quick Install</string>
     <string name="quick_mode_summary">Show smaller dialog to install/uninstall,install progress will be hiden to allow people install multiple app quickly</string>
 
+    <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
+    <string name="show_cpu_info">Show CPU info</string>
+    <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
+    <string name="show_cpu_info_summary">Screen overlay showing current CPU info</string>
+
 </resources>
