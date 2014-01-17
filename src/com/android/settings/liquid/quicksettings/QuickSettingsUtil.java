@@ -63,6 +63,7 @@ import static com.android.internal.util.liquid.QSConstants.TILE_ONTHEGO;
 import static com.android.internal.util.liquid.QSConstants.TILE_PROFILE;
 import static com.android.internal.util.liquid.QSConstants.TILE_HOVER;
 import static com.android.internal.util.liquid.QSConstants.TILE_REMOTEDISPLAY;
+import static com.android.internal.util.liquid.QSConstants.TILE_WEATHER;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -199,6 +200,9 @@ public class QuickSettingsUtil {
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_HOVER, R.string.title_tile_hover,
                 "com.android.systemui:drawable/ic_qs_hover_on"));
+        registerTile(new QuickSettingsUtil.TileInfo(
+                TILE_WEATHER, R.string.tile_weather,
+                "com.android.systemui:drawable/weather_preferences"));
     }
 
     private static void registerTile(QuickSettingsUtil.TileInfo info) {
