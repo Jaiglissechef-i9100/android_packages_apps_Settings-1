@@ -47,6 +47,12 @@
                 android:summaryOn="@string/verify_applications_summary"
                 android:persistent="false" />
 
+        <CheckBoxPreference
+                android:key="quickinstall"
+                android:title="@string/quick_mode_title"
+                android:summary="@string/quick_mode_summary"
+                android:persistent="false" />
+
         <Preference
                 android:key="manage_notification_access"
                 android:title="@string/manage_notification_access"

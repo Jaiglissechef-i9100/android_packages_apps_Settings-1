@@ -99,6 +99,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private static final String KEY_CREDENTIALS_MANAGER = "credentials_management";
     private static final String KEY_NOTIFICATION_ACCESS = "manage_notification_access";
     private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
+    private static final String KEY_QUICK_INSTALL = "quickinstall";
 
     // LiquidSmooth Additions
     private static final String KEY_APP_SECURITY_CATEGORY = "app_security";
@@ -137,6 +138,8 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private ListPreference mAdvancedReboot;
 
     private int mShakeTypeChosen = -1;
+
+    private CheckBoxPreference mQuickInstall;
 
     private boolean mIsPrimary;
 
@@ -398,6 +401,11 @@ public class SecuritySettings extends RestrictedSettingsFragment
                 getContentResolver(), Settings.Secure.ADVANCED_REBOOT, 2)));
         mAdvancedReboot.setSummary(mAdvancedReboot.getEntry());
         mAdvancedReboot.setOnPreferenceChangeListener(this);
+
+        // APP quick install
+        mQuickInstall = (CheckBoxPreference) root.findPreference(KEY_QUICK_INSTALL);
+        mQuickInstall.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.PACKAGE_INSTALLER_QUICK_MODE_ENABLED, 0) == 1);
 
         mSmsSecurityCheck = (ListPreference) root.findPreference(KEY_SMS_SECURITY_CHECK_PREF);
 
@@ -698,6 +706,10 @@ public class SecuritySettings extends RestrictedSettingsFragment
         } else if (KEY_TOGGLE_VERIFY_APPLICATIONS.equals(key)) {
             Settings.Global.putInt(getContentResolver(), Settings.Global.PACKAGE_VERIFIER_ENABLE,
                     mToggleVerifyApps.isChecked() ? 1 : 0);
+        } else if (preference == mQuickInstall) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.PACKAGE_INSTALLER_QUICK_MODE_ENABLED,
+                    mQuickInstall.isChecked() ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
