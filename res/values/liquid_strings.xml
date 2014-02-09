@@ -2673,4 +2673,12 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- QuickSettings Custom Tiles -->
     <string name="tile_weather">Weather</string>
+
+    <!-- Weather Tile Preference -->
+    <string name="title_general">Weather Settings</string>
+    <string name="pref_weather_tile">Weather Tile</string>
+    <string name="pref_weather_tile_iconset">Weather Tile Icon</string>
+    <string name="weather_tile_color">Color Icon</string>
+    <string name="weather_tile_mono">Mono Icon</string>
+    <string name="weather_tile_vclouds">vClouds Icon</string>
 </resources>
