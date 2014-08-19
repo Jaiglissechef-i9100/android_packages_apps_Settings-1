@@ -101,6 +101,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
 
     private static final String ENABLE_ADB = "enable_adb";
     private static final String ADB_NOTIFY = "adb_notify";
+    private static final String ADB_PARANOID = "adb_paranoid";
     private static final String CLEAR_ADB_KEYS = "clear_adb_keys";
     private static final String ADB_TCPIP  = "adb_over_network";
     private static final String ENABLE_TERMINAL = "enable_terminal";
@@ -189,6 +190,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
 
     private CheckBoxPreference mEnableAdb;
     private CheckBoxPreference mAdbNotify;
+    private CheckBoxPreference mAdbParanoid;
     private Preference mClearAdbKeys;
     private CheckBoxPreference mEnableTerminal;
     private CheckBoxPreference mAdbOverNetwork;
@@ -286,6 +288,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         mEnableAdb = findAndInitCheckboxPref(ENABLE_ADB);
         mAdbNotify = findAndInitCheckboxPref(ADB_NOTIFY);
         mClearAdbKeys = findPreference(CLEAR_ADB_KEYS);
+        mAdbParanoid = findAndInitCheckboxPref(ADB_PARANOID);
         if (!SystemProperties.getBoolean("ro.adb.secure", false)) {
             if (debugDebuggingCategory != null) {
                 debugDebuggingCategory.removePreference(mClearAdbKeys);
@@ -308,6 +311,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
 
         if (!android.os.Process.myUserHandle().equals(UserHandle.OWNER)) {
             disableForUser(mEnableAdb);
+            disableForUser(mAdbParanoid);
             disableForUser(mClearAdbKeys);
             disableForUser(mEnableTerminal);
             disableForUser(mPassword);
@@ -561,7 +565,9 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         updateCheckBox(mEnableAdb, Settings.Global.getInt(cr,
                 Settings.Global.ADB_ENABLED, mUnofficialBuild ? 1 : 0) != 0);
         mAdbNotify.setChecked(Settings.Secure.getInt(cr,
-            Settings.Secure.ADB_NOTIFY, 1) != 0);
+                Settings.Secure.ADB_NOTIFY, 1) != 0);
+        mAdbParanoid.setChecked(Settings.Secure.getInt(cr,
+                Settings.Secure.ADB_PARANOID, 0) != 0);
         if (mEnableTerminal != null) {
             updateCheckBox(mEnableTerminal,
                     context.getPackageManager().getApplicationEnabledSetting(TERMINAL_APP_PACKAGE)
@@ -1369,6 +1375,10 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             pm.setApplicationEnabledSetting(TERMINAL_APP_PACKAGE,
                     mEnableTerminal.isChecked() ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
                             : PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, 0);
+        } else if (preference == mAdbParanoid) {
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.ADB_PARANOID,
+                            mAdbParanoid.isChecked() ? 1 : 0);
         } else if (preference == mKeepScreenOn) {
             Settings.Global.putInt(getActivity().getContentResolver(),
                     Settings.Global.STAY_ON_WHILE_PLUGGED_IN,
