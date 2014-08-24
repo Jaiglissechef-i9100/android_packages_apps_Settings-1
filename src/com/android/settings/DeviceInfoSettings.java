@@ -413,4 +413,13 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
 
         return result;
     }
+
+    private void addStringPreference(String key, String value) {
+        if (value != null) {
+            setStringSummary(key, value);
+        } else {
+            getPreferenceScreen().removePreference(findPreference(key));
+        }
+    }
+
 }
