@@ -100,16 +100,10 @@
         android:defaultValue="false"
         android:dependency="pa_pie_controls" />
 
-    <CheckBoxPreference
-        android:key="pa_pie_menu"
-        android:title="@string/pa_pie_menu_title"
-        android:summary="@string/pa_pie_menu_summary"
-        android:dependency="pa_pie_controls" />
-
-    <CheckBoxPreference
-        android:key="pa_pie_search"
-        android:title="@string/pa_pie_search_title"
-        android:summary="@string/pa_pie_search_summary"
-        android:dependency="pa_pie_controls" />
+    <PreferenceScreen
+        android:key="pie_targets"
+        android:title="@string/pie_targets_title"
+        android:fragment="com.android.settings.liquid.PieTargets"
+        android:dependency="pie_controls" />
 
 </PreferenceScreen>
