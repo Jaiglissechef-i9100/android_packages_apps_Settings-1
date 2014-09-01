@@ -26,6 +26,15 @@
         android:summary="@string/advanced_adblocker_summary" />
 
     <PreferenceScreen
+        android:title="@string/aosb_gps_settings_title"
+        android:key="aosb_gps"
+        android:summary="@string/aosb_gps_settings_summary">
+        <intent android:targetPackage="com.aosb.gps"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.aosb.gps.GPSCountryChangerInterface" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
         android:key="pref_battery_saver"
         android:fragment="com.android.settings.liquid.BatterySaverSettings"
         android:title="@string/battery_saver_title"

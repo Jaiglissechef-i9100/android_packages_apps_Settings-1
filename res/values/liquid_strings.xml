@@ -2633,4 +2633,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="calendar_shortcut_title">Date</string>
     <string name="default_shortcut">Default</string>
 
+    <!-- GPS Settings -->
+    <string name="aosb_gps_settings_title">GPS Optimizer</string>
+    <string name="aosb_gps_settings_summary">Modify gps.conf to specific country</string>
+
 </resources>
