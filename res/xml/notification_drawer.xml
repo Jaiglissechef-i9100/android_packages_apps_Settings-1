@@ -104,6 +104,12 @@
             android:entryValues="@array/smart_pulldown_values"
             android:persistent="false" />
 
+        <com.android.settings.liquid.SystemCheckBoxPreference
+            android:key="status_bar_custom_header"
+            android:title="@string/custom_statusbar_header_title"
+            android:summary="@string/custom_statusbar_header_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
         <PreferenceCategory
