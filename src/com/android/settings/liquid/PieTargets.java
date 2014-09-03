@@ -37,14 +37,14 @@ import com.android.internal.util.liquid.DeviceUtils;
 
 public class PieTargets extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
-    private static final String PIE_MENU = "pie_menu";
-    private static final String PIE_SEARCH = "pie_search";
-    private static final String PIE_LASTAPP = "pie_lastapp";
-    private static final String PIE_KILLTASK = "pie_killtask";
-    private static final String PIE_TORCH = "pie_torch";
-    private static final String PIE_ACTNOTIF = "pie_actnotif";
-    private static final String PIE_POWER = "pie_power";
-    private static final String PIE_SCREENSHOT = "pie_screenshot";
+    private static final String PA_PIE_MENU = "pa_pie_menu";
+    private static final String PA_PIE_SEARCH = "pa_pie_search";
+    private static final String PA_PIE_LASTAPP = "pa_pie_lastapp";
+    private static final String PA_PIE_KILLTASK = "pa_pie_killtask";
+    private static final String PA_PIE_TORCH = "pa_pie_torch";
+    private static final String PA_PIE_ACTNOTIF = "pa_pie_actnotif";
+    private static final String PA_PIE_POWER = "pa_pie_power";
+    private static final String PA_PIE_SCREENSHOT = "pa_pie_screenshot";
 
     private CheckBoxPreference mPieMenu;
     private CheckBoxPreference mPieSearch;
@@ -71,11 +71,11 @@ public class PieTargets extends SettingsPreferenceFragment implements OnPreferen
         Context context = getActivity();
         mResolver = context.getContentResolver();
 
-        mPieMenu = (CheckBoxPreference) prefSet.findPreference(PIE_MENU);
+        mPieMenu = (CheckBoxPreference) prefSet.findPreference(PA_PIE_MENU);
         mPieMenu.setChecked(Settings.System.getInt(mResolver,
                 Settings.System.PA_PIE_MENU, 1) != 0);
 
-        mPieSearch = (CheckBoxPreference) prefSet.findPreference(PIE_SEARCH);
+        mPieSearch = (CheckBoxPreference) prefSet.findPreference(PA_PIE_SEARCH);
         mPieSearch.setChecked(Settings.System.getInt(mResolver,
                 Settings.System.PA_PIE_SEARCH, 0) != 0);
 
@@ -83,27 +83,27 @@ public class PieTargets extends SettingsPreferenceFragment implements OnPreferen
             prefSet.removePreference(mPieSearch);
         }
 
-        mPieLastApp = (CheckBoxPreference) prefSet.findPreference(PIE_LASTAPP);
+        mPieLastApp = (CheckBoxPreference) prefSet.findPreference(PA_PIE_LASTAPP);
         mPieLastApp.setChecked(Settings.System.getInt(mResolver,
                 Settings.System.PA_PIE_LAST_APP, 0) != 0);
 
-        mPieKillTask = (CheckBoxPreference) prefSet.findPreference(PIE_KILLTASK);
+        mPieKillTask = (CheckBoxPreference) prefSet.findPreference(PA_PIE_KILLTASK);
         mPieKillTask.setChecked(Settings.System.getInt(mResolver,
                 Settings.System.PA_PIE_KILL_TASK, 0) != 0);
 
-        mPieTorch = (CheckBoxPreference) prefSet.findPreference(PIE_TORCH);
+        mPieTorch = (CheckBoxPreference) prefSet.findPreference(PA_PIE_TORCH);
         mPieTorch.setChecked(Settings.System.getInt(mResolver,
                 Settings.System.PA_PIE_TORCH, 0) != 0);
 
-        mPieActNotif = (CheckBoxPreference) prefSet.findPreference(PIE_ACTNOTIF);
+        mPieActNotif = (CheckBoxPreference) prefSet.findPreference(PA_PIE_ACTNOTIF);
         mPieActNotif.setChecked(Settings.System.getInt(mResolver,
                 Settings.System.PA_PIE_ACT_NOTIF, 0) != 0);
 
-        mPiePower = (CheckBoxPreference) prefSet.findPreference(PIE_POWER);
+        mPiePower = (CheckBoxPreference) prefSet.findPreference(PA_PIE_POWER);
         mPiePower.setChecked(Settings.System.getInt(mResolver,
                 Settings.System.PA_PIE_POWER, 0) != 0);
 
-        mPieScreenshot = (CheckBoxPreference) prefSet.findPreference(PIE_SCREENSHOT);
+        mPieScreenshot = (CheckBoxPreference) prefSet.findPreference(PA_PIE_SCREENSHOT);
         mPieScreenshot.setChecked(Settings.System.getInt(mResolver,
                 Settings.System.PA_PIE_SCREENSHOT, 0) != 0);
     }
