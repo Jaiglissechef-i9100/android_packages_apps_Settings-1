@@ -7,7 +7,7 @@
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="pa_pie_button_color"
         android:title="@string/pa_pie_button_color"
-        android:defaultValue="0xffffffff"
+        android:defaultValue="0xb2ffffff"
         android:dependency="pa_pie_enable_color" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
@@ -46,7 +46,7 @@
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="pa_pie_chevron_left"
         android:title="@string/pa_pie_chevron_left_title"
-        android:defaultValue="0xff0999cc"
+        android:defaultValue="0xffffffff"
         android:dependency="pa_pie_enable_color" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
