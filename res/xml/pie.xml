@@ -102,7 +102,7 @@
 
     <PreferenceScreen
         android:key="pie_targets"
-        android:title="@string/pie_targets_title"
+        android:title="@string/pa_pie_targets_title"
         android:fragment="com.android.settings.liquid.PieTargets"
         android:dependency="pie_controls" />
 

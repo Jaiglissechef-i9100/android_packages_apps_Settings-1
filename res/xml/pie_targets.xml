@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/pie_targets_title">
+    android:title="@string/pa_pie_targets_title">
 
     <CheckBoxPreference
         android:key="pie_menu"

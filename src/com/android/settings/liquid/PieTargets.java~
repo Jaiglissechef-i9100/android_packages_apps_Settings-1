@@ -66,6 +66,7 @@ public class PieTargets extends SettingsPreferenceFragment implements OnPreferen
         PreferenceScreen prefSet = getPreferenceScreen();
 
         ActionBar actionBar = getActivity().getActionBar();
+        actionBar.setIcon(R.drawable.ic_settings_dirt);
 
         Context context = getActivity();
         mResolver = context.getContentResolver();
