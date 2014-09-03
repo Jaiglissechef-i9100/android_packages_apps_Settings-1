@@ -38,7 +38,7 @@
     <PreferenceScreen
         android:key="halo_options"
         android:id="@+id/halo_options"
-        android:title="@string/halo_options_title"
+        android:title="@string/halo_settings_title"
         android:summary="@string/halo_summary"
         android:fragment="com.android.settings.liquid.HaloOptions" />
 

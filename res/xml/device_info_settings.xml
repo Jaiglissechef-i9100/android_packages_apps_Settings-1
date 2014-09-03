@@ -21,6 +21,13 @@
                           android:enabled="false"
                           android:layout="@layout/liquid_logo_row" />
 
+        <!-- LiquidSmooth Downloads -->
+        <Preference
+                android:key="download_center"
+                android:fragment="com.android.settings.liquid.Download"
+                android:title="@string/download_category"
+                android:summary="@string/download_category_summary" />
+
         <!-- Liquid Extra Info -->
         <PreferenceScreen android:key="extrainfo"
                 android:title="@string/lsextrainfo"

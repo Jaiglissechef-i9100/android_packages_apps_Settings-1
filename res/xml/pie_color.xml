@@ -52,12 +52,12 @@
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="pa_pie_chevron_right"
         android:title="@string/pa_pie_chevron_right_title"
-        android:defaultValue="0xff33b5e5"
+        android:defaultValue="0xffffffff"
         android:dependency="pa_pie_enable_color" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="pa_pie_juice"
         android:title="@string/pa_pie_juice_title"
-        android:defaultValue="0xff33b5e5"
+        android:defaultValue="0xffffffff"
         android:dependency="pa_pie_enable_color" />
 </PreferenceScreen>
