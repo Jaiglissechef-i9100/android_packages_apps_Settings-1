@@ -3,42 +3,42 @@
     android:title="@string/pa_pie_targets_title">
 
     <CheckBoxPreference
-        android:key="pie_menu"
+        android:key="pa_pie_menu"
         android:title="@string/pa_pie_menu_title"
         android:summary="@string/pa_pie_menu_summary" />
 
     <CheckBoxPreference
-        android:key="pie_search"
+        android:key="pa_pie_search"
         android:title="@string/pa_pie_search_title"
         android:summary="@string/pa_pie_search_summary" />
 
     <CheckBoxPreference
-        android:key="pie_lastapp"
+        android:key="pa_pie_lastapp"
         android:title="@string/pa_pie_lastapp_title"
         android:summary="@string/pa_pie_lastapp_summary" />
 
     <CheckBoxPreference
-        android:key="pie_killtask"
+        android:key="pa_pie_killtask"
         android:title="@string/pa_pie_killtask_title"
         android:summary="@string/pa_pie_killtask_summary" />
 
     <CheckBoxPreference
-        android:key="pie_torch"
+        android:key="pa_pie_torch"
         android:title="@string/pa_pie_torch_title"
         android:summary="@string/pa_pie_torch_summary" />
 
     <CheckBoxPreference
-        android:key="pie_actnotif"
+        android:key="pa_pie_actnotif"
         android:title="@string/pa_pie_actnotif_title"
         android:summary="@string/pa_pie_actnotif_summary" />
 
     <CheckBoxPreference
-        android:key="pie_power"
+        android:key="pa_pie_power"
         android:title="@string/pa_pie_power_title"
         android:summary="@string/pa_pie_power_summary" />
 
     <CheckBoxPreference
-        android:key="pie_screenshot"
+        android:key="pa_pie_screenshot"
         android:title="@string/pa_pie_screenshot_title"
         android:summary="@string/pa_pie_screenshot_summary" />
 
