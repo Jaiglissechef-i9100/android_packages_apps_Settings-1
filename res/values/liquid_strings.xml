@@ -75,6 +75,7 @@
 
     <!-- Device settings -->
     <string name="device_settings_title">Device</string>
+    <string name="devicesettings_app_summary">Configure device specific options</string>
     <string name="device_legal_summary">Open source and Google licenses</string>
 
     <!-- Action shortcuts -->
@@ -290,6 +291,7 @@
     <string name="pref_volume_wake_summary">Pressing the volume rocker up/down will wake the device</string>
     <string name="wakeup_when_plugged_unplugged_title">Wake up on charge</string>
     <string name="wakeup_when_plugged_unplugged_summary">Wake up device if charger is plugged/unplugged.</string>
+    <string name="double_tap_to_wake_title">Double-tap to wake</string>
 
     <!-- Sound settings -->
     <string name="sound_title">Sound</string>
@@ -301,13 +303,6 @@
     <string name="volume_adjust_sounds_enable_summary">Play sound when adjusting volume with hard keys</string>
     <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
     <string name="volume_ring_only_description">Ringtone</string>
-
-    <!-- Volume Overlay -->
-    <string name="volume_overlay_title">Volume panel style</string>
-    <string name="volume_overlay_single">Single</string>
-    <string name="volume_overlay_expandable">Expandable</string>
-    <string name="volume_overlay_expanded">Expanded</string>
-    <string name="volume_overlay_disable">Disable</string>
 
     <!-- Sound settings screen, setting check box label -->
     <string name="camera_sounds_title">Camera shutter sound</string>
@@ -447,6 +442,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="select_contact">Select contact</string>
 
     <string name="increasing_ring_title">Ascending ringtone</string>
+    <string name="increasing_ring_summary">Ringtone starts low then gets higher</string>
     <!-- Sound settings screen, the caption of the checkbox for making incoming calls increase in volume -->
     <string name="checkbox_increasing_ring">Enable</string>
     <!-- Sound settings screen, the title of the volume bar to adjust the minimum increasing ring volume -->
@@ -867,6 +863,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
     <string name="lockscreen_shorcuts_longpress_summary">Lock screen shortcuts on longpress</string>
 
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+    <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
+
     <!-- Lock screen style -->
     <string name="lockscreen_style_title">Style</string>
     <string name="lockscreen_style_reset_message">Reset all lock screen colors?</string>
@@ -935,14 +935,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="lock_pattern_size_4">4x4</string>
     <string name="lock_pattern_size_5">5x5</string>
     <string name="lock_pattern_size_6">6x6</string>
-
-    <!--Lock screen see through-->
-    <string name="see_through_title">See through</string>
-    <string name="see_through_summary">Shows the content behind lock screen</string>
-
-    <!--Lock screen blur radius -->
-    <string name="blur_radius_title">Blur radius</string>
-    <string name="blur_radius_summary">Set lock screen blur intensity effect</string>
 
     <!-- Notification drawer background -->
     <string name="notification_style_title">Background style</string>
@@ -1359,7 +1351,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pa_pie_size_title">Pie size</string>
     <string name="pa_pie_size_summary">Define Pie controls size</string>
     <string name="pa_pie_size_small">Small</string>
-    <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
+    <string name="pa_pie_size_default" translatable="false">@string/pa_pie_mode_default</string>
     <string name="pa_pie_size_large">Large</string>
     <string name="pa_pie_size_gigantic">Gigantic</string>
     <string name="pa_pie_size_monster">Monster</string>
@@ -1397,9 +1389,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pa_pie_trigger_title">Trigger area</string>
     <string name="pa_pie_trigger_summary">Determine the size of the region that registers swipes</string>
     <string name="pa_pie_trigger_none">None (Pie disabled)</string>
-    <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
-    <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
-    <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
+    <string name="pa_pie_trigger_small" translatable="false">@string/pa_pie_size_small</string>
+    <string name="pa_pie_trigger_normal" translatable="false">@string/pa_pie_mode_default</string>
+    <string name="pa_pie_trigger_big" translatable="false">@string/pa_pie_gap_big</string>
     <string name="pa_pie_trigger_huge">Huge</string>
     <string name="pa_pie_notifications_title">Enable Chevron Targets</string>
     <string name="pa_pie_notifications_summary">Enabling this will let the Notification panel and QuickSettings tiles become available when swiping</string>
@@ -1445,18 +1437,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="app_moving_reboot_now_button">Reboot now</string>
     <string name="app_moving_reboot_later_button">Reboot later</string>
 
-    <!-- Wakelock blocker -->
-    <string name="wakelock_blocker">Wakelock blocker</string>
-    <string name="wakelock_blocker_title">Enable</string>
-    <string name="wakelock_blocker_summary">Block system wakelocks</string>
-    <string name="wakelock_blocker_save">Save</string>
-    <string name="wakelock_list_header">Available wakelocks</string>
-    <string name="wakelock_blocker_reload">Reload</string>
-    <string name="wakelock_blocker_warning_title">Proceed with caution</string>
-    <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss.</string>
-
     <!-- Volume Steps -->
     <string name="volume_steps_title">Volume Steps</string>
+    <string name="volume_steps_summary">Change how much the volume changes on each click</string>
     <string name="volume_steps_60">60</string>
     <string name="volume_steps_45">45</string>
     <string name="volume_steps_30">30</string>
@@ -1692,7 +1675,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="title_animation_no_override">Prevent app overrides</string>
     <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>
     <string name="animation_duration_default">Default</string>
-    <string name="header_summary_animation">@null</string>
+    <string name="header_summary_animation" translatable="false">@null</string>
 
     <!-- Clock widget -->
     <string name="lock_clock_title">Clock widget</string>
@@ -1867,6 +1850,21 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Allow Multiuser -->
     <string name="multiuser_preference_title">Multiuser support</string>
 
+    <!-- Status bar color -->
+    <string name="custom_status_bar_header_title">Status Bar Color</string>
+    <string name="custom_status_bar_color_title">Custom status bar color</string>
+    <string name="status_bar_opaque_color">Opaque color</string>
+    <string name="status_bar_transparent_color">Dimmed color</string>
+    <string name="status_bar_color_reset">Reset status bar color</string>
+    <string name="restart_status_bar_menu_title">Restart status bar</string>
+    <string name="restart_status_bar_title">Restart?</string>
+    <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
+    <string name="custom_system_icon_color_title">Custom system icon color</string>
+    <string name="system_icon_color">Icon color</string>
+    <string name="custom_color_summary">Override the system color of the System UI</string>
+    <string name="custom_status_bar_apply_title">Apply</string>
+    <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
+
     <!-- Battery Bar -->
     <string name="status_bar_battery_cat_title">Battery</string>
     <string name="battery_bar_title">Battery Bar</string>
@@ -1880,6 +1878,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Sound themes -->
     <string name="sound_packages_title">Sound packs</string>
+    <string name="sound_packages_summary">Allows you set custom sound easily</string>
     <string name="install_sound_pack_title">Install sound pack</string>
     <string name="install_sound_pack_summary">Install new sound packs added in SoundPacks folder on the internal storage</string>
     <string name="select_sound_pack_title">Select sound pack</string>
@@ -2268,6 +2267,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="profile_lockmode_disabled_summary">Lock screen is disabled</string>
     <string name="profile_airplanemode_title">Airplane mode</string>
 
+    <!-- Disable immersive mode navbar when ime is showing -->
+    <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
+    <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
+
     <!-- Connection override toggles (not all are used at this time ) -->
     <string name="toggleWifi">Wi-Fi</string>
     <string name="toggleWifiAp">Portable Wi-Fi hotspot</string>
@@ -2489,10 +2492,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="sizer_message_filefail">Failed to create profile.</string>
     <string name="sizer_message_noselect">Nothing selected.</string>
 
-    <!-- Statusbar Second Clock -->
-    <string name="clock_use_second">Second</string>
-    <string name="clock_use_second_summary">Show seconds in the clock</string>
-
     <!-- Text for disabling immersive mode messages -->
     <string name="disable_immersive_message_title">Disable Immersive Mode Messages</string>
     <string name="disable_immersive_message_summary">This will hide all Immersive Mode Messages</string>
@@ -2620,6 +2619,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
     <string name="overscroll_weight_title">Over scrolling weight</string>
     <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
+
+    <!-- LiquidSmooth Main Settings -->
+    <string name="liquid_settings_title">LiquidSmooth</string>
+
+    <!-- LiquidSmooth Sound -->
+    <string name="liquid_sound_title">LiquidSmooth sound</string>
+    <string name="liquid_sound_summary">All sound related settings that we have added</string>
 
     <!-- Backlight brightness settings screen -->
     <string name="adaptive_backlight_title">Adaptive backlight</string>

@@ -42,7 +42,8 @@
 
     <PreferenceScreen
         android:key="devicesettings_app"
-        android:title="@string/device_settings_title">
+        android:title="@string/device_settings_title"
+        android:summary="@string/devicesettings_app_summary">
         <intent
             android:action="com.cyanogenmod.action.LAUNCH_DEVICE_SETTINGS"
             android:targetPackage="com.cyanogenmod.settings.device"
@@ -59,11 +60,5 @@
         android:title="@string/sizer_title"
         android:fragment="com.android.settings.liquid.SystemappRemover"
         android:summary="@string/advanced_systemapp_summary" />
-
-    <PreferenceScreen
-        android:id="@+id/wakelock_blocker"
-        android:title="@string/wakelock_blocker"
-        android:fragment="com.android.settings.liquid.WakeLockBlocker"
-        android:summary="@string/advanced_wakelock_summary" />
 
 </PreferenceScreen>
