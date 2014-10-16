@@ -63,6 +63,7 @@ import static com.android.internal.util.liquid.QSConstants.TILE_ONTHEGO;
 import static com.android.internal.util.liquid.QSConstants.TILE_PROFILE;
 import static com.android.internal.util.liquid.QSConstants.TILE_HOVER;
 import static com.android.internal.util.liquid.QSConstants.TILE_REMOTEDISPLAY;
+import static com.android.internal.util.liquid.QSConstants.TILE_EQUALIZER;
 import static com.android.internal.util.liquid.QSConstants.TILE_WEATHER;
 
 import android.content.ContentResolver;
@@ -293,6 +294,8 @@ public class QuickSettingsUtil {
             return context.getResources().getString(R.string.dynamic_tile_bugreport);
         } else if (tile.equals(TILE_REMOTEDISPLAY)) {
             return context.getResources().getString(R.string.dynamic_tile_remote_display);
+        } else if (tile.equals(TILE_EQUALIZER)) {
+            return context.getResources().getString(R.string.dynamic_tile_equalizer);
         }
         return null;
     }
